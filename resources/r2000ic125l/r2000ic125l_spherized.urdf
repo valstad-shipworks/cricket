@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="spherized" path="r2000ic125l/r2000ic125l.urdf">
+	<link name="base_link">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.332177"></sphere>
+			</geometry>
+			<origin xyz="-0.17918201139640808 -0.0763629986410141 0.14104099749660493" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.250658"></sphere>
+			</geometry>
+			<origin xyz="-0.2557250113964081 0.1357820013589859 0.12049199749660491" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.272534"></sphere>
+			</geometry>
+			<origin xyz="0.12042598860359191 0.1568320013589859 0.09231199749660492" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.29147"></sphere>
+			</geometry>
+			<origin xyz="0.12265098860359192 -0.1251749986410141 0.10828399749660492" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link_1">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.353835"></sphere>
+			</geometry>
+			<origin xyz="0.015984732437549998 -0.027090526776385196 0.15959872231238054" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.104559"></sphere>
+			</geometry>
+			<origin xyz="-0.28750926756245 0.3759894732236148 0.2918217223123805" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.306527"></sphere>
+			</geometry>
+			<origin xyz="0.26144873243755 -0.0638355267763852 0.31830272231238055" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.253958"></sphere>
+			</geometry>
+			<origin xyz="-0.12507326756245 0.25965247322361484 0.08922872231238052" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.206919"></sphere>
+			</geometry>
+			<origin xyz="-0.15509026756245 0.0017014732236148022 0.2961887223123805" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.220771"></sphere>
+			</geometry>
+			<origin xyz="0.11005973243755 0.2509874732236148 0.08022172231238053" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link_2">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.253397"></sphere>
+			</geometry>
+			<origin xyz="0.031456724719158335 -0.16904887316338696 0.10459652224572809" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.262084"></sphere>
+			</geometry>
+			<origin xyz="0.07842372471915833 -0.525054873163387 0.1492965222457281" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.233493"></sphere>
+			</geometry>
+			<origin xyz="0.03056072471915833 -0.8681288731633869 0.1783075222457281" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.241222"></sphere>
+			</geometry>
+			<origin xyz="-0.013485275280841674 0.01014612683661309 0.11087352224572809" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.202869"></sphere>
+			</geometry>
+			<origin xyz="0.00937872471915833 -1.0712498731633868 0.2093895222457281" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.122009"></sphere>
+			</geometry>
+			<origin xyz="0.19817272471915834 -1.210665873163387 0.2524105222457281" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.222122"></sphere>
+			</geometry>
+			<origin xyz="-0.06413727528084166 0.07267612683661306 0.13840052224572807" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.190433"></sphere>
+			</geometry>
+			<origin xyz="-0.10143927528084166 -0.012340873163387056 0.09721352224572809" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link_3">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.302726"></sphere>
+			</geometry>
+			<origin xyz="0.15873751545489279 0.18132081953562726 0.2333064715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.241464"></sphere>
+			</geometry>
+			<origin xyz="0.032803515454892795 0.013099819535627263 0.1563374715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.245055"></sphere>
+			</geometry>
+			<origin xyz="0.08091151545489272 0.047227819535627255 0.2876374715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.182211"></sphere>
+			</geometry>
+			<origin xyz="1.3790465154548928 0.21896381953562727 0.2643214715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.165157"></sphere>
+			</geometry>
+			<origin xyz="0.47535051545489276 0.22391681953562725 0.2738964715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.153522"></sphere>
+			</geometry>
+			<origin xyz="0.6971705154548927 0.22685681953562725 0.2708774715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.161544"></sphere>
+			</geometry>
+			<origin xyz="1.1190795154548927 0.22156981953562727 0.2699114715478142" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.144789"></sphere>
+			</geometry>
+			<origin xyz="0.8928245154548928 0.21917781953562726 0.27117347154781424" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link_4">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.126774"></sphere>
+			</geometry>
+			<origin xyz="-0.0010284411152159953 0.0013746314480852135 -0.06403570190690396" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.110885"></sphere>
+			</geometry>
+			<origin xyz="-0.010528441115215996 -0.006016368551914787 -0.21849070190690395" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.100207"></sphere>
+			</geometry>
+			<origin xyz="-0.019467441115215995 0.0009986314480852137 -0.24705570190690396" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.072516"></sphere>
+			</geometry>
+			<origin xyz="-0.036456441115215996 0.04965263144808521 -0.22597270190690394" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link_5">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.184384"></sphere>
+			</geometry>
+			<origin xyz="-0.0029023984732169245 0.0009400352564748623 0.046392750658137694" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.147524"></sphere>
+			</geometry>
+			<origin xyz="-0.10752939847321691 -0.00039396474352513785 -0.0164562493418623" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<link name="link_6">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 0 0"></origin>
+			<mass value="0"></mass>
+			<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"></inertia>
+		</inertial>
+		<collision>
+			<geometry>
+				<sphere radius="0.085955"></sphere>
+			</geometry>
+			<origin xyz="-6.51460303110361e-05 -0.0068281482008118715 0.022504131117780823" rpy="0 0 0"></origin>
+		</collision>
+		<collision>
+			<geometry>
+				<sphere radius="0.08465"></sphere>
+			</geometry>
+			<origin xyz="0.001350853969688964 0.01738485179918813 0.021699131117780823" rpy="0 0 0"></origin>
+		</collision>
+	</link>
+	<joint name="joint_1" type="revolute">
+		<origin xyz="0 0 0.299" rpy="0 0 0"></origin>
+		<parent link="base_link"></parent>
+		<child link="link_1"></child>
+		<axis xyz="0 0 1"></axis>
+		<limit effort="10" velocity="130" lower="-2" upper="2"></limit>
+	</joint>
+	<joint name="joint_2" type="revolute">
+		<origin xyz="0.312 0.08699999999999999 0.371" rpy="-1.5708 0 0"></origin>
+		<parent link="link_1"></parent>
+		<child link="link_2"></child>
+		<axis xyz="0 1 0"></axis>
+		<limit effort="10" velocity="115" lower="-1.0472" upper="1.32645"></limit>
+	</joint>
+	<joint name="joint_3" type="revolute">
+		<origin xyz="0 -1.075 0.17515" rpy="3.14159 0 0"></origin>
+		<parent link="link_2"></parent>
+		<child link="link_3"></child>
+		<axis xyz="0 0 -1"></axis>
+		<limit effort="10" velocity="125" lower="-1.41372" upper="1.64061"></limit>
+	</joint>
+	<joint name="joint_4" type="revolute">
+		<origin xyz="1.499 0.225 0.26215" rpy="-3.14159 1.5708 0"></origin>
+		<parent link="link_3"></parent>
+		<child link="link_4"></child>
+		<axis xyz="-1 0 0"></axis>
+		<limit effort="10" velocity="180" lower="-6.28319" upper="6.28319"></limit>
+	</joint>
+	<joint name="joint_5" type="revolute">
+		<origin xyz="0 0 -0.231" rpy="0 -1.5708 0"></origin>
+		<parent link="link_4"></parent>
+		<child link="link_5"></child>
+		<axis xyz="-1 0 0"></axis>
+		<limit effort="10" velocity="180" lower="-2.18166" upper="2.18166"></limit>
+	</joint>
+	<joint name="joint_6" type="revolute">
+		<origin xyz="-0.215 0 0" rpy="-1.5708 0 -1.5708"></origin>
+		<parent link="link_5"></parent>
+		<child link="link_6"></child>
+		<axis xyz="1 0 0"></axis>
+		<limit effort="10" velocity="260" lower="-6.28319" upper="6.28319"></limit>
+	</joint>
+</robot>

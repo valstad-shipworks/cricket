@@ -40,6 +40,8 @@ struct {{name}}
         FloatVector<rake, n_spheres> r;
     };
 
+    {% include "joint_format" %}
+
     alignas(Configuration::S::Alignment) static constexpr std::array<float, dimension> s_m{
         {{join(bound_range, ", ")}}
     };

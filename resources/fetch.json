@@ -5,6 +5,9 @@
     "end_effector": "gripper_link",
     "resolution": 32,
     "template": "templates/fk_template.hh",
-    "subtemplates": [{"name": "ccfk", "template": "templates/ccfk_template.hh"}],
+    "subtemplates": [
+        {"name": "ccfk", "template": "templates/ccfk_template.hh"},
+        {"name": "joint_format", "template": "templates/joint_format_template.hh"}
+    ],
     "output": "fetch_fk.hh"
 }

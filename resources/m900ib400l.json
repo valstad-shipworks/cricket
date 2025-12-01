@@ -1,0 +1,13 @@
+{
+    "name": "M900IB400L",
+    "urdf": "m900ib400l/m900ib400l_spherized.urdf",
+    "srdf": "m900ib400l/m900ib400l.srdf",
+    "end_effector": "link_6",
+    "resolution": 32,
+    "template": "templates/fk_template.hh",
+    "subtemplates": [
+        {"name": "ccfk", "template": "templates/ccfk_template.hh"},
+        {"name": "joint_format", "template": "templates/fanuc_joint_format_template.hh"}
+    ],
+    "output": "m900ib400l_fk.hh"
+}

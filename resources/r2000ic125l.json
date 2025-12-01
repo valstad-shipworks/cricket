@@ -1,13 +1,13 @@
 {
-    "name": "FR3",
-    "urdf": "fr3/fr3_spherized.urdf",
-    "srdf": "fr3/fr3.srdf",
-    "end_effector": "fr3_hand_tcp",
+    "name": "R2000IC125L",
+    "urdf": "r2000ic125l/r2000ic125l_spherized.urdf",
+    "srdf": "r2000ic125l/r2000ic125l.srdf",
+    "end_effector": "link_6",
     "resolution": 32,
     "template": "templates/fk_template.hh",
     "subtemplates": [
         {"name": "ccfk", "template": "templates/ccfk_template.hh"},
         {"name": "joint_format", "template": "templates/joint_format_template.hh"}
     ],
-    "output": "fr3_fk.hh"
+    "output": "r2000ic125l_fk.hh"
 }

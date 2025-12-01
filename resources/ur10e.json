@@ -4,6 +4,9 @@
     "end_effector": "robotiq_85_base_link",
     "resolution": 32,
     "template": "templates/fk_template.hh",
-    "subtemplates": [{"name": "ccfk", "template": "templates/ccfk_template.hh"}],
+    "subtemplates": [
+        {"name": "ccfk", "template": "templates/ccfk_template.hh"},
+        {"name": "joint_format", "template": "templates/joint_format_template.hh"}
+    ],
     "output": "ur10e_fk.hh"
 }
