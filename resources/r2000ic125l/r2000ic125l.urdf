@@ -1,15 +1,11 @@
 <?xml version="1.0" ?>
-<!-- Generated using onshape-to-robot -->
-<!-- Onshape https://cad.onshape.com/documents/82eb8f2d07827b403f4d1a43/w/42aa989f962e1896fd326ef5/e/0db9dd0b03cb5e7778ef8cb7 -->
 <robot name="r2000ic125l">
-  <!-- Link base_link -->
   <link name="base_link">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
-    <!-- Part base_link -->
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -26,14 +22,12 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link link_1 -->
   <link name="link_1">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
-    <!-- Part link_1 -->
     <visual>
       <origin xyz="0 0 -0.299" rpy="0 0 0"/>
       <geometry>
@@ -50,14 +44,12 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link link_2 -->
   <link name="link_2">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
-    <!-- Part link_2 -->
     <visual>
       <origin xyz="0 0 -0.08699999999999999" rpy="1.5708 0 0"/>
       <geometry>
@@ -74,14 +66,12 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link link_3 -->
   <link name="link_3">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
-    <!-- Part link_3 -->
     <visual>
       <origin xyz="0 0 0.26215" rpy="-1.5708 0 0"/>
       <geometry>
@@ -98,14 +88,12 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link link_4 -->
   <link name="link_4">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
-    <!-- Part link_4 -->
     <visual>
       <origin xyz="0 0 -0.231" rpy="1.5708 1.5708 0"/>
       <geometry>
@@ -122,14 +110,12 @@
       </geometry>
     </collision>
   </link>
-  <!-- Link link_5 -->
   <link name="link_5">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0"/>
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
-    <!-- Part link_5 -->
     <visual>
       <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
       <geometry>
