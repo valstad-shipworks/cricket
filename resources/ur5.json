@@ -3,6 +3,7 @@
     "urdf": "ur5/ur5_spherized.urdf",
     "srdf": "ur5/ur5.srdf",
     "end_effector": "robotiq_85_base_link",
+    "forced_end_effector_collision": [],
     "resolution": 32,
     "template": "templates/fk_template.hh",
     "subtemplates": [

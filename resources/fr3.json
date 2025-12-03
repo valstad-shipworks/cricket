@@ -3,6 +3,7 @@
     "urdf": "fr3/fr3_spherized.urdf",
     "srdf": "fr3/fr3.srdf",
     "end_effector": "fr3_hand_tcp",
+    "forced_end_effector_collision": [],
     "resolution": 32,
     "template": "templates/fk_template.hh",
     "subtemplates": [

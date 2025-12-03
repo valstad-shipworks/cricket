@@ -21,6 +21,9 @@
 #include <cxxopts.hpp>
 
 #include <filesystem>
+#include <limits>
+#include <map>
+#include <set>
 #include <stdexcept>
 #include <vector>
 #include <optional>
@@ -77,7 +80,8 @@ struct RobotInfo
     RobotInfo(
         const std::filesystem::path &urdf_file,
         const std::optional<std::filesystem::path> &srdf_file,
-        const std::optional<std::string> &end_effector)
+        const std::optional<std::string> &end_effector,
+        const std::vector<std::string> &forced_end_effector_collision = {})
     {
         if (not std::filesystem::exists(urdf_file))
         {
@@ -120,6 +124,7 @@ struct RobotInfo
         }
 
         end_effector_index = model.getFrameId(end_effector_name);
+        set_forced_end_effector_collisions(forced_end_effector_collision);
     }
 
     auto json() -> nlohmann::json
@@ -155,6 +160,24 @@ struct RobotInfo
         json["link_names"] = link_names;
 
         return json;
+    }
+
+    auto set_forced_end_effector_collisions(const std::vector<std::string> &frame_names) -> void
+    {
+        forced_end_effector_collisions.clear();
+
+        std::set<std::size_t> collisions;
+        for (const auto &name : frame_names)
+        {
+            if (not model.existFrame(name))
+            {
+                throw std::runtime_error(fmt::format("Invalid forced EE collision frame {}", name));
+            }
+
+            collisions.emplace(model.getFrameId(name));
+        }
+
+        forced_end_effector_collisions.assign(collisions.begin(), collisions.end());
     }
 
     auto dof_to_joint_names() -> std::vector<std::string>
@@ -197,15 +220,17 @@ struct RobotInfo
             }
         }
 
-        std::set<std::size_t> end_effector_allowed_collisions;
+        std::set<std::size_t> end_effector_frames(frames.begin(), frames.end());
+        std::set<std::size_t> end_effector_allowed_collisions(
+            forced_end_effector_collisions.begin(), forced_end_effector_collisions.end());
         for (const auto &[first, second] : allowed_link_pairs)
         {
-            if (std::find(frames.begin(), frames.end(), first) != frames.end())
+            if (end_effector_frames.find(first) != end_effector_frames.end())
             {
                 end_effector_allowed_collisions.emplace(second);
             }
 
-            if (std::find(frames.begin(), frames.end(), second) != frames.end())
+            if (end_effector_frames.find(second) != end_effector_frames.end())
             {
                 end_effector_allowed_collisions.emplace(first);
             }
@@ -233,8 +258,8 @@ struct RobotInfo
 
                 spheres.emplace_back(info);
 
-                min_radius = std::min(min_radius, info.radius);
-                max_radius = std::max(max_radius, info.radius);
+                min_radius = (info.radius < min_radius) ? info.radius : min_radius;
+                max_radius = (info.radius > max_radius) ? info.radius : max_radius;
             }
             else
             {
@@ -410,6 +435,7 @@ struct RobotInfo
     std::vector<std::vector<std::size_t>> per_link_spheres;
     std::set<std::pair<std::size_t, std::size_t>> allowed_link_pairs;
     std::vector<std::size_t> bounding_sphere_index;
+    std::vector<std::size_t> forced_end_effector_collisions;
 };
 
 auto trace_sphere(const SphereInfo &sphere, const ADData &ad_data, ADVectorXs &data, std::size_t index)
@@ -598,7 +624,16 @@ int main(int argc, char **argv)
         end_effector_name = data["end_effector"];
     }
 
-    RobotInfo robot(parent_path / data["urdf"], srdf_path, end_effector_name);
+    std::vector<std::string> forced_end_effector_collisions;
+    if (data.contains("forced_end_effector_collision") and
+        data["forced_end_effector_collision"].is_array())
+    {
+        forced_end_effector_collisions =
+            data["forced_end_effector_collision"].get<std::vector<std::string>>();
+    }
+
+    RobotInfo robot(
+        parent_path / data["urdf"], srdf_path, end_effector_name, forced_end_effector_collisions);
 
     data.update(robot.json());
 

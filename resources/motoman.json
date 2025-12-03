@@ -3,6 +3,7 @@
     "urdf": "motoman/motoman_sda10f_spherized.urdf",
     "srdf": "motoman/motoman_sda10f.srdf",
     "end_effector": "arm_right_link_tool0",
+    "forced_end_effector_collision": [],
     "resolution": 64,
     "template": "templates/fk_template.hh",
     "subtemplates": [

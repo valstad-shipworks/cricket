@@ -8,9 +8,10 @@ if [ -z "$ROBOT_NAME" ]; then
 fi
 
 # if a "-b" flag is passed build tthe docker image aswell
-if [ "$2" == "--docker" ]; then
+if [ "$2" == "--docker-build" ]; then
   docker build -t cricket:latest .
-
+fi
+if [ "$2" == "--docker" ] || [ "$2" == "--docker-build" ]; then
   JSON_FILE="/mount/resources/${ROBOT_NAME}.json"
   OUTPUT_FILE="/mount/${ROBOT_NAME}.hh"
 

@@ -3,6 +3,7 @@
     "urdf": "fetch/fetch_spherized.urdf",
     "srdf": "fetch/fetch.srdf",
     "end_effector": "gripper_link",
+    "forced_end_effector_collision": [],
     "resolution": 32,
     "template": "templates/fk_template.hh",
     "subtemplates": [

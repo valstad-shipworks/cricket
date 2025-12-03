@@ -3,6 +3,13 @@
     "urdf": "m900ib400l/m900ib400l_spherized.urdf",
     "srdf": "m900ib400l/m900ib400l.srdf",
     "end_effector": "link_6",
+    "forced_end_effector_collision": [
+        "base_link",
+        "link_1",
+        "link_2",
+        "link_3",
+        "link_4"
+    ],
     "resolution": 32,
     "template": "templates/fk_template.hh",
     "subtemplates": [

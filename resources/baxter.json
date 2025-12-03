@@ -3,6 +3,7 @@
     "urdf": "baxter/baxter_spherized.urdf",
     "srdf": "baxter/baxter.srdf",
     "end_effector": "right_gripper",
+    "forced_end_effector_collision": [],
     "resolution": 64,
     "template": "templates/fk_template.hh",
     "subtemplates": [
