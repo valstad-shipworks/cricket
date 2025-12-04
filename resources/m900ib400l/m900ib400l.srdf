@@ -24,4 +24,5 @@
   <disable_collisions link1="link_3"   link2="link_4" reason="Never"/>
   <disable_collisions link1="link_3"   link2="link_5" reason="Never"/>
   <disable_collisions link1="link_3"   link2="link_6" reason="Never"/>
+  <disable_collisions link1="link_4"   link2="link_6" reason="Never"/>
 </robot>
