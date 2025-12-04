@@ -5,6 +5,8 @@
 #include <vamp/collision/environment.hh>
 #include <vamp/collision/validity.hh>
 
+#define Validity vamp::Validity
+
 // NOLINTBEGIN(*-magic-numbers)
 namespace vamp::robots
 {
@@ -159,7 +161,7 @@ struct {{name}}
     }
 
     template <std::size_t rake>
-        static inline bool fkcc(
+        static inline Validity fkcc(
             const vamp::collision::Environment<FloatVector<rake>> &environment,
             const ConfigurationBlock<rake> &x) noexcept
     {
@@ -169,11 +171,11 @@ struct {{name}}
         {{ccfk_code}}
         {% include "ccfk" %}
 
-        return true;
+        return Validity::VALID;
     }
 
     template <std::size_t rake>
-    static inline bool fkcc_attach(
+    static inline Validity fkcc_attach(
         const vamp::collision::Environment<FloatVector<rake>> &environment,
         const ConfigurationBlock<rake> &x) noexcept
     {
@@ -191,7 +193,7 @@ struct {{name}}
         //
         if (attachment_environment_collision(environment))
         {
-            return false;
+            return Validity::ATTACHMENT_ENVIRONMENT_COLLISION;
         }
 
         //
@@ -218,13 +220,13 @@ struct {{name}}
                                                             y[{{sphere_index * 4 + 2}}],
                                                             y[{{sphere_index * 4 + 3}}]))
             {
-                return false;
+                return Validity::ATTACHMENT_SELF_COLLISION;
             }
             {% endfor %}
         }
         {% endfor %}
 
-        return true;
+        return Validity::VALID;
     }
 
     static inline auto eefk(const std::array<float, {{n_q}}> &x) noexcept -> Eigen::Isometry3f

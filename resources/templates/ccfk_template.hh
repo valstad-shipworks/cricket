@@ -23,7 +23,7 @@ if (sphere_environment_in_collision(environment,
                                         y[{{ sphere_loc + 2 }}],
                                         y[{{ sphere_loc + 3 }}]))
     {
-        return false;
+        return Validity::ENVIRONMENT_COLLISION;
     }
     {% endfor %}
 }
@@ -70,7 +70,7 @@ if (sphere_sphere_self_collision<decltype(x[0])>(y[{{link_1_bs_loc + 0}}],
                                                      y[{{ sphere_2_loc * 4 + 2}} ],
                                                      y[{{ sphere_2_loc * 4 + 3}} ]))
     {
-        return false;
+        return Validity::SELF_COLLISION;
     }
 
     {% endfor %}
